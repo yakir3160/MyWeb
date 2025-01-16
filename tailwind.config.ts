@@ -20,7 +20,18 @@ const config: Config = {
         md: "2rem",
       },
     },
-    extend: {},
+    extend: {
+      colors :{
+        background: "#083416",
+        gucci: "#188A50",
+        action: "#4caf50",
+        text: "#F8F5E4",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        serif: ["var(--font-serif)"],
+      },
+    },
   },
   plugins: [],
 };
