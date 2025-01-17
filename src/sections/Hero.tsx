@@ -21,18 +21,17 @@ export const HeroSection = () => {
         </div>
         <h1 className="text-3xl font-serif text-center mt-8 tracking-wide">Building Exceptional User Experiences</h1>
         <p className="text-center mt-4  text-text/60">
-          Specializing in crafting seamless web applications, I turn complex
-          challenges into elegant solutions that perform beautifully. Ready to
-          discuss your next project?
+          I specialize in transforming designs into functional, high-performing
+          web applications.Let's discuss your next project!
         </p>
-        <div>
-          <button>
-            <span>Explore My Work</span>
-            <ArrowDown />
+        <div className="flex flex-col md:flex-row items-center mt-8 gap-4">
+          <button className="inline-flex items-center gap-2 border border-text/20 px-6 h-12 rounded-full">
+            <span className="font-semibold">Explore My Work</span>
+            <ArrowDown className="size-4" />
           </button>
-          <button>
-            <span>👋🏻</span>
-            <span>Let's Connect</span>
+          <button className="inline-flex  items-center gap-2 border border-text bg-text text-background px-6 h-12 rounded-full p-6 h-2">
+            <span>👋</span>
+            <span className="font-semibold">Let's Connect</span>
           </button>
         </div>
       </div>
