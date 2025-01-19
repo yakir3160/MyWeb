@@ -22,10 +22,11 @@ const config: Config = {
     },
     extend: {
       colors :{
-        background: "#083416",
+        background: "#041e0e",
         gucci: "#188A50",
         action: "#4caf50",
-        text: "#F8F5E4",
+        text: "#fcfaf2",
+        yellow: "#ffe450",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
