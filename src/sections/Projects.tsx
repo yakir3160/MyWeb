@@ -51,16 +51,23 @@ export const ProjectsSection = () => {
       <section className={`pb-16 lg:py-24`}>
         <div className="container ">
           <div className={`flex flex-col justify-center`}>
-            <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-yellow  bg-clip-text text-transparent text-center ">Real-World-Results</p>
+            <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-yellow  bg-clip-text text-transparent text-center ">
+              Real-World-Results
+            </p>
           </div>
-          <h2 className={`text-3xl md:text-5xl font-serif text-center mt-6`}>Featured Projects</h2>
-          <p className={`text-center text-text/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto`}>See how I transformed concepts into engaging digital experiences.</p>
+          <h2 className={`text-3xl md:text-5xl font-serif text-center mt-6`}>
+            Featured Projects
+          </h2>
+          <p className={`text-center text-text/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto`}>
+            See how I transformed concepts into engaging digital experiences.
+          </p>
           <div className="flex flex-col mt-10 md:mt-20 gap-20">
             {portfolioProjects.map((project) => (
                 <div key={project.title} className="bg-gucci/20 rounded-3xl relative
             after:content-[''] after:absolute after:inset-0 z-0 after:z-10
             overflow-hidden after:outline-2 
-            after:outline after:outline-action/20 after:-outline-offset-2 after:rounded-3xl px-8 pt-8 md:pt-12 md:px-10 after:pointer-events-none "
+            after:outline after:outline-action/20 after:-outline-offset-2 after:rounded-3xl
+            px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none "
                 >
 
                   <div className={'absolute inset-0 -z-10 opacity-5  '}
@@ -69,8 +76,8 @@ export const ProjectsSection = () => {
                        }}>
                   </div>
 
-                  <div className={`lg:grid lg:grid-cols-2 lg:gap-10`}>
-                    <div>
+                  <div className={`lg:grid lg:grid-cols-2 lg:gap-16`}>
+                    <div className={`lg:pb-16`}>
                       <div
                           className={`uppercase gap-2  font-semibold inline-flex bg-gradient-to-r from-emerald-300 to-yellow tracking-widest text-sm text-transparent bg-clip-text `}>
                         <span>{project.company}</span>
@@ -81,31 +88,33 @@ export const ProjectsSection = () => {
                       <hr className={`border-t-2 border-action/20 mt-4 md:mt-5`}/>
                       <ul className={`flex flex-col gap-4 mt-4`}>
                         {project.results.map((result) => (
-                            <li className={`flex gap-2 text-sm md:text-base text-text/60 `}>
+                            <li  className={`flex gap-2 text-sm md:text-base text-text/60 `}>
                               <CheckIcon className={`size-5 md:size-6`}/>
                               <span>{result.title} </span>
                             </li>
                         ))}
                       </ul>
-                      <div className={`flex flex-col md:flex-row gap-4 mt-4`}>
+                      <div className={`flex flex-col md:flex-row md:gap-4 mt-2`}>
                         <a href={project.link}>
                           <button className={`inline-flex justify-center items-center gap-2  bg-background border border-action/60 
-                     rounded-3xl h-12 px-6 py-5 w-full md:w-auto font-semibold text-text`}>
+                     rounded-3xl h-12 px-6 py-5 w-full md:w-auto text-nowrap mt-6  md:mt-8 font-semibold text-text`}>
                             <span>View on GitHub</span>
                             <GithubIcon className={`size-4`}/>
                           </button>
                         </a>
                         <a href={project.link}>
                           <button className={`inline-flex justify-center items-center  gap-2 bg-text 
-                       rounded-3xl h-12 px-6 w-full  md:w-auto  font-semibold text-background`}>
+                       rounded-3xl h-12 px-6 w-full  md:w-auto mt-8 text-nowrap  font-semibold text-background`}>
                             <span>Visit Live Site</span>
                             <ArrowRight className={`size-4`}/>
                           </button>
                         </a>
                       </div>
                     </div>
-                    <div>
-                      <Image src={project.image} alt={project.title} className={`mt-8 -mb-4 md:mb-0`}/>
+                    <div className={`relative`}>
+                      <Image src={project.image}
+                             alt={project.title}
+                             className={`mt-8 -mb-4 lg:mt-0 md:mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}/>
                     </div>
                   </div>
                 </div>
