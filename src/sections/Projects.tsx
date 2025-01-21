@@ -6,6 +6,8 @@ import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowRight from "@/assets/icons/arrow-up-right.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import {SectionHeader} from "@/components/SectionHeader";
+import {Card} from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -48,34 +50,13 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return(
-      <section className={`pb-16 lg:py-24`}>
+      <section className={`pb-16 lg:py-24 `}>
         <div className="container ">
-          <div className={`flex flex-col justify-center`}>
-            <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-yellow  bg-clip-text text-transparent text-center ">
-              Real-World-Results
-            </p>
-          </div>
-          <h2 className={`text-3xl md:text-5xl font-serif text-center mt-6`}>
-            Featured Projects
-          </h2>
-          <p className={`text-center text-text/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto`}>
-            See how I transformed concepts into engaging digital experiences.
-          </p>
+          <SectionHeader  eyebrow={"Real-World-Results"} title={"Featured Projects"} description={"See how I transformed concepts into engaging digital experiences."}/>
           <div className="flex flex-col mt-10 md:mt-20 gap-20">
             {portfolioProjects.map((project) => (
-                <div key={project.title} className="bg-gucci/20 rounded-3xl relative
-            after:content-[''] after:absolute after:inset-0 z-0 after:z-10
-            overflow-hidden after:outline-2 
-            after:outline after:outline-action/20 after:-outline-offset-2 after:rounded-3xl
-            px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none "
-                >
 
-                  <div className={'absolute inset-0 -z-10 opacity-5  '}
-                       style={{
-                         backgroundImage: `url(${grainImage.src})`
-                       }}>
-                  </div>
-
+                <Card key={project.title} className={`pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20` }>
                   <div className={`lg:grid lg:grid-cols-2 lg:gap-16`}>
                     <div className={`lg:pb-16`}>
                       <div
@@ -96,10 +77,14 @@ export const ProjectsSection = () => {
                       </ul>
                       <div className={`flex flex-col md:flex-row md:gap-4 mt-2`}>
                         <a href={project.link}>
-                          <button className={`inline-flex justify-center items-center gap-2  bg-background border border-action/60 
-                     rounded-3xl h-12 px-6 py-5 w-full md:w-auto text-nowrap mt-6  md:mt-8 font-semibold text-text`}>
-                            <span>View on GitHub</span>
-                            <GithubIcon className={`size-4`}/>
+                          <button
+                              className="inline-flex justify-center items-center gap-2 relative bg-background rounded-3xl w-full md:w-auto mt-6 md:mt-8">
+                            <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-3xl"/>
+                            <div className="absolute inset-[1px] bg-background rounded-3xl"/>
+                            <span className="relative inline-flex items-center gap-2 px-6 h-12">
+      <span className="font-semibold text-text text-nowrap">View on GitHub</span>
+      <GithubIcon className="size-4"/>
+    </span>
                           </button>
                         </a>
                         <a href={project.link}>
@@ -117,7 +102,7 @@ export const ProjectsSection = () => {
                              className={`mt-8 -mb-4 lg:mt-0 md:mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}/>
                     </div>
                   </div>
-                </div>
+                </Card>
             ))}
           </div>
         </div>

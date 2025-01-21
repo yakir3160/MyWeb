@@ -28,6 +28,7 @@ const config: Config = {
         text: "#fcfaf2",
         yellow: "#ffe450",
       },
+      
       fontFamily: {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
