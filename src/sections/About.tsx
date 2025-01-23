@@ -1,7 +1,6 @@
 import {SectionHeader} from "@/components/SectionHeader";
 import {Card} from "@/components/Card";
 import {CardHeader} from "@/components/CardHeader";
-import {TechIcon} from "@/components/TechIcon";
 import Image from "next/image";
 
 import StarIcon from "@/assets/icons/star.svg";
@@ -124,15 +123,15 @@ const hobbies = [
 ]
 export const AboutSection = () => {
     return (
-        <div className={`py-20`}>
+        <div className={`py-20 lg:py-[116px]`}>
             <div className={`container`}>
                 <SectionHeader
                     title={"A Glimpse Into My World"}
                     eyebrow={"About Me"}
                     description={"Learn more about who I am, what I do, and what inspires me."}/>
-                <div className={`mt-20 flex flex-col gap-8`}>
-                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-5`}>
-                        <Card className={`h-[320px] col-span-2`}>
+                <div className={`mt-[85px] flex flex-col gap-8`}>
+                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3`}>
+                        <Card className={`h-[320px] md:col-span-2 lg:col-span-1`}>
                             <CardHeader
                                 title={"My Reads"}
                                 description={"Explore the books shaping my perspectives"}/>
@@ -140,7 +139,7 @@ export const AboutSection = () => {
                                 <Image src={BookImage} alt={`Book Image`}/>
                             </div>
                         </Card>
-                        <Card className={`h-[320px] col-span-3`}>
+                        <Card className={`h-[320px] md:col-span-3 lg:col-span-2`}>
                             <CardHeader
                                 title={"My Toolbox"}
                                 description={"Explore the technologies and tools I use to" +
@@ -150,8 +149,8 @@ export const AboutSection = () => {
                             <ToolboxItem items={toolboxItems}  itemsWrapperClassName={'-translate-x-1/2'}/>
                         </Card>
                     </div>
-                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-5`}>
-                        <Card className={`h-[320px] flex flex-col col-span-3`}>
+                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3`}>
+                        <Card className={`h-[320px] flex flex-col md:col-span-3 lg:col-span-2`}>
                             <CardHeader
                                 title={"Beyond the Code"}
                                 description={"Explore my interests and hobbies beyond digital realm"}
@@ -173,7 +172,7 @@ export const AboutSection = () => {
                                 ))}
                             </div>
                         </Card>
-                        <Card className={`h-[320px] relative col-span-2`}>
+                        <Card className={`h-[320px] relative md:col-span-2 lg:col-span-1`}>
                             <Image
                                 src={MapImage}
                                 alt={'Map Image'}
@@ -194,6 +193,7 @@ export const AboutSection = () => {
                         </Card>
                     </div>
                 </div>
+
             </div>
         </div>
     );
