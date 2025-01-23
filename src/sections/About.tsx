@@ -131,69 +131,68 @@ export const AboutSection = () => {
                     eyebrow={"About Me"}
                     description={"Learn more about who I am, what I do, and what inspires me."}/>
                 <div className={`mt-20 flex flex-col gap-8`}>
-                    <Card className={`h-[320px]`}>
-                        <CardHeader
-                            title={"My Reads"}
-                            description={"Explore the books shaping my perspectives"}/>
-                        <div className={`w-40 mx-auto mt-8`}>
-                            <Image src={BookImage} alt={`Book Image`}/>
-                        </div>
-                    </Card>
-                    <Card className={`h-[320px] p-0`}>
-                        <CardHeader
-                            title={"My Toolbox"}
-                            description={"Explore the technologies and tools I use to" +
-                                " craft exceptional digital experiences"}
-                            className={`px-6 pt-6`}
-                        />
-                        <ToolboxItem items={toolboxItems} className={`mt-6`}/>
-                        <ToolboxItem items={toolboxItems} className={`mt-6`} itemsWrapperClassName={'-translate-x-1/2'}/>
-                    </Card>
-                    <Card className={`h-[320px] p-0 flex flex-col `}>
-                        <CardHeader
-                            title={"Beyond the Code"}
-                            description={"Explore my interests and hobbies beyond digital realm"}
-                            className={`px-6 py-6`}
-                        />
-                        <div className={`relative flex-1`}>
-                            {hobbies.map((hobby) => (
-                                <div key={hobby.title} className={` absolute inline-flex gap-2 px-6 
+                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-5`}>
+                        <Card className={`h-[320px] col-span-2`}>
+                            <CardHeader
+                                title={"My Reads"}
+                                description={"Explore the books shaping my perspectives"}/>
+                            <div className={`w-40 mx-auto mt-2 md:mt-0`}>
+                                <Image src={BookImage} alt={`Book Image`}/>
+                            </div>
+                        </Card>
+                        <Card className={`h-[320px] col-span-3`}>
+                            <CardHeader
+                                title={"My Toolbox"}
+                                description={"Explore the technologies and tools I use to" +
+                                    " craft exceptional digital experiences"}
+                            />
+                            <ToolboxItem items={toolboxItems} />
+                            <ToolboxItem items={toolboxItems}  itemsWrapperClassName={'-translate-x-1/2'}/>
+                        </Card>
+                    </div>
+                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-5`}>
+                        <Card className={`h-[320px] flex flex-col col-span-3`}>
+                            <CardHeader
+                                title={"Beyond the Code"}
+                                description={"Explore my interests and hobbies beyond digital realm"}
+                            />
+                            <div className={`relative flex-1`}>
+                                {hobbies.map((hobby) => (
+                                    <div key={hobby.title} className={` absolute inline-flex gap-2 px-6 
                             bg-gradient-to-r from-emerald-500 to-yellow rounded-full py-2
                             items-center
                             `}
-                                     style={{
-                                         left: hobby.left,
-                                         top: hobby.top,
-                                     }}
-                                >
-                                    <span className={`font-medium  text-background`}>{hobby.title}</span>
-                                    <span>{hobby.emoji}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </Card>
-                    <Card className={`h-[320px] p-0 relative`}>
-                        <Image
-                            src={MapImage}
-                            alt={'Map Image'}
-                            className={`h-full w-full object-cover`}
-                        />
-                        <div className={`absolute top-28 left-1/2
+                                         style={{
+                                             left: hobby.left,
+                                             top: hobby.top,
+                                         }}
+                                    >
+                                        <span className={`font-medium  text-background`}>{hobby.title}</span>
+                                        <span>{hobby.emoji}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </Card>
+                        <Card className={`h-[320px] relative col-span-2`}>
+                            <Image
+                                src={MapImage}
+                                alt={'Map Image'}
+                                className={`h-full w-full object-cover object-left-top `}
+                            />
+                            <div className={`absolute top-28 left-1/2
                         -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r 
                         from-emerald-300 to-yellow  after:absolute after:contain-['']
                         after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gucci/60
                         
                         `}>
-                        <Image
-                            src={SmileMemoji}
-                            alt={'Smile Memoji'}
-                            className={`size-20`}
-                        />
-                        </div>
-                    </Card>
-                    <Card>
-
-                    </Card>
+                                <Image
+                                    src={SmileMemoji}
+                                    alt={'Smile Memoji'}
+                                    className={`size-20`}
+                                />
+                            </div>
+                        </Card>
+                    </div>
                 </div>
             </div>
         </div>

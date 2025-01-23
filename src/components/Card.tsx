@@ -9,7 +9,7 @@ export const Card = ({className,children} :
             "            after:content-[''] after:absolute after:inset-0 z-0 after:z-10\n" +
             "            overflow-hidden after:outline-2\n" +
             "            after:outline after:outline-action/20 after:-outline-offset-2\n" +
-            "             after:pointer-events-none after:rounded-3xl p-6",className)}
+            "             after:pointer-events-none after:rounded-3xl",className)}
         >
             <div className={'absolute inset-0 -z-10 opacity-5  '}
                  style={{
