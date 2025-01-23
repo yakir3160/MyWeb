@@ -146,14 +146,14 @@ export const AboutSection = () => {
                                     " craft exceptional digital experiences"}
                             />
                             <ToolboxItem items={toolboxItems} />
-                            <ToolboxItem items={toolboxItems}  itemsWrapperClassName={'-translate-x-1/2'}/>
+                            <ToolboxItem items={toolboxItems} className={`mt-4`}  itemsWrapperClassName={'-translate-x-1/2'}/>
                         </Card>
                     </div>
                     <div className={`grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3`}>
                         <Card className={`h-[320px] flex flex-col md:col-span-3 lg:col-span-2`}>
                             <CardHeader
                                 title={"Beyond the Code"}
-                                description={"Explore my interests and hobbies beyond digital realm"}
+                                description={"Explore my interests and hobbies beyond the digital realm"}
                             />
                             <div className={`relative flex-1`}>
                                 {hobbies.map((hobby) => (
