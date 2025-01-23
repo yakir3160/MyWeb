@@ -1,3 +1,4 @@
+"use client"
 import memoji from "@/assets/images/memoji-computer.png";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import Image from "next/image";
@@ -81,16 +82,16 @@ export const HeroSection = () => {
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-4">
-            <button className="inline-flex items-center gap-2 relative bg-background rounded-full">
+            <button className="inline-flex z-0 items-center gap-2 relative bg-background hover:text-text/90 rounded-full">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-full"/>
-              <div className="absolute inset-[1px] bg-background rounded-full"/>
+              <div className="absolute inset-[1px] bg-background   rounded-full"/>
               <span className="relative inline-flex items-center gap-2 px-6 h-12">
                   <span className="font-semibold">Explore My Work</span>
                   <ArrowDown className="size-4"/>
               </span>
             </button>
             <button
-                className=" inline-flex items-center gap-2 border border-text bg-text text-background px-6 h-12 rounded-full">
+                className=" inline-flex z-0 items-center hover:opacity-95 gap-2 border border-text bg-text text-background px-6 h-12 rounded-full">
               <span>👋</span>
               <span className="font-semibold">Let's Connect</span>
             </button>
