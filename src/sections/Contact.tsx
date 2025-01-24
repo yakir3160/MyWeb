@@ -4,7 +4,6 @@ export const ContactSection = () => {
     return (
         <div className={`py-14 pt-10 lg:py-20`}>
             <div className={'container'}>
-
                 <div className={`bg-gradient-to-r from-emerald-500 to-yellow text-background 
                 py-8 px-10 rounded-3xl text-center md:text-left relative z-0 overflow-hidden`}>
                     <div
