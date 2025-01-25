@@ -15,3 +15,8 @@
    @apply lg:max-w-5xl
  }
 }
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #188A50 #1A202C;
+  scroll-behavior: smooth;
+}
