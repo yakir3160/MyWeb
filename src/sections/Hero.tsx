@@ -8,8 +8,8 @@ import {HeroOrbit} from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 
 const BASE_DURATION = '35s';
-const STAR_DURATION = '6s';
-const SPARKLE_DURATION = '3s';
+const STAR_DURATION = '8s';
+const SPARKLE_DURATION = '5s';
 export const HeroSection = () => {
   return (
       <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip ">
