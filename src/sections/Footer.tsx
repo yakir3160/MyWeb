@@ -12,7 +12,7 @@ const footerLinks = [
     },
     {
         title: 'LinkedIn',
-        url: '#',
+        url: 'https://www.linkedin.com/in/yakir-albilya/',
         icon: LinkedinIcon,
     },
 ];
