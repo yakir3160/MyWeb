@@ -54,9 +54,13 @@ export const ProjectsSection = () => {
         <div className="container ">
           <SectionHeader  eyebrow={"Real-World-Results"} title={"Featured Projects"} description={"See how I transformed concepts into engaging digital experiences."}/>
           <div className="flex flex-col mt-10 md:mt-20 gap-20">
-            {portfolioProjects.map((project) => (
+            {portfolioProjects.map((project,projectIndex) => (
 
-                <Card key={project.title} className={`pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20` }>
+                <Card key={project.title} className={`pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16` }
+                        style={{
+                            top :`calc(64px + ${projectIndex * 38}px`
+                        }}
+                >
                   <div className={`lg:grid lg:grid-cols-2 lg:gap-16`}>
                     <div className={`lg:pb-16`}>
                       <div
@@ -82,9 +86,9 @@ export const ProjectsSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-3xl"/>
                             <div className="absolute inset-[1px] bg-background rounded-3xl"/>
                             <span className="relative inline-flex items-center gap-2 px-6 h-12">
-      <span className="font-semibold text-text text-nowrap">View on GitHub</span>
-      <GithubIcon className="size-4"/>
-    </span>
+                             <span className="font-semibold text-text text-nowrap">View on GitHub</span>
+                            <GithubIcon className="size-4"/>
+                            </span>
                           </button>
                         </a>
                         <a href={project.link}>
