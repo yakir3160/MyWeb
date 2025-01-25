@@ -81,7 +81,7 @@ export const HeroSection = () => {
               high-performing web applications.Let's discuss your next project.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
             <button className="inline-flex z-0 items-center gap-2 relative bg-background hover:text-text/90 rounded-full">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-full"/>
               <div className="absolute inset-[1px] bg-background   rounded-full"/>
