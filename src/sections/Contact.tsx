@@ -3,7 +3,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import {SectionHeader} from "@/components/SectionHeader";
 export const ContactSection = () => {
     return (
-        <div className={`py-12 pt-5 lg:py-20`}>
+        <div className={`py-12  lg:py-20`}>
             <SectionHeader  eyebrow={'contact '} />
             <div className={'container'}>
                 <div className={`bg-gradient-to-r from-emerald-500 to-yellow text-background 
