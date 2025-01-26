@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="250" height="250">
+    <defs>
+        <!-- גרדיאנט -->
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#10B981" /> <!-- Emerald 500 -->
+            <stop offset="100%" stop-color="#FACC15" /> <!-- Yellow -->
+        </linearGradient>
+    </defs>
+    <!-- ריבוע עם הגרדיאנט -->
+    <rect x="0" y="0" width="100" height="100" fill="url(#gradient)" rx="50" />
+    <!-- טקסט שקוף -->
+    <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-family="var(--font-serif)" font-size="90" fill="#041e0e" >
+        Y
+    </text>
+</svg>

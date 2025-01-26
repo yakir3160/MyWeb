@@ -107,7 +107,7 @@ export const HeroSection = () => {
               shouldOrbitSpin
               spinOrbitDuration={`calc(${BASE_DURATION} + 18s)`}
               shouldStarSpin
-                spinStarDuration={STAR_DURATION}
+              spinStarDuration={STAR_DURATION}
           >
             <StarIcon className="size-28 text-emerald-500"/>
           </HeroOrbit>
@@ -131,7 +131,7 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="max-w-lg pb-1 lg:pb-3 mx-auto">
-            <h1 className="text-3xl md:text-5xl font-serif text-center mt-8 tracking-wide">
+            <h1 className="hero-span text-3xl md:text-5xl font-serif text-center mt-8 tracking-wide">
               Hi, I'm Yakir Albilya <br />
             </h1>
             <h2 className="text-lg md:text-4=2xl  text-text/80  font-serif text-center mt-1">
@@ -144,21 +144,20 @@ export const HeroSection = () => {
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
             <a href="#projects">
-            <button className="inline-flex z-0 items-center gap-2 relative bg-background hover:text-text/90 rounded-full">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-full"/>
-              <div className="absolute inset-[1px] bg-background   rounded-full"/>
-              <span className="relative inline-flex items-center gap-2 px-6 h-12">
+              <button className="inline-flex z-0 items-center gap-2 relative bg-background hover:text-text/90 rounded-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-full"/>
+                <div className="absolute inset-[1px] bg-background   rounded-full"/>
+                <span className="relative inline-flex items-center gap-2 px-6 h-12">
                   <span className="font-semibold">Explore My Work</span>
                   <ArrowDown className="size-4"/>
               </span>
-            </button>
+              </button>
             </a>
-            <a href="#contact">
-            <button
-                className=" inline-flex z-0 items-center hover:opacity-95 gap-2 border border-text bg-text text-background px-6 h-12 rounded-full">
-              <span>👋</span>
-              <span className="font-semibold">Let's Connect</span>
-            </button>
+            <a href="#contact" className={`z-0`}>
+              <button  className=" inline-flex  z-0 items-center hover:opacity-70 gap-2 border border-text bg-text text-background px-6 h-12 rounded-full">
+                <span>👋</span>
+                <span className="font-semibold">Let's Connect</span>
+              </button>
             </a>
           </div>
         </div>

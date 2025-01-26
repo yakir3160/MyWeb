@@ -11,12 +11,34 @@
   }
 }
 @layer utilities {
- .container {
-   @apply lg:max-w-5xl
- }
+  .container {
+    @apply lg:max-w-5xl
+  }
 }
 *{
   scrollbar-width: thin;
   scrollbar-color: #188A50 #1A202C;
   scroll-behavior: smooth;
+}
+.hero-span {
+  background-image: linear-gradient(
+          to right,
+          #6EE7B7 20%,
+          #fcfaf2 40%,
+          #ffe450 60%,
+          #52e0a7 80%
+  );
+  background-size: 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: shine 10s infinite linear;
+}
+@keyframes shine {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 200%;
+  }
+
 }

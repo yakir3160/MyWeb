@@ -18,7 +18,7 @@ import VercelIcon from "@/assets/icons/logo-vercel.svg"
 
 import MapImage from "@/assets/images/map.png";
 import SmileMemoji from "@/assets/images/memoji-smile.png";
-import BookImage from "@/assets/images/book-cover.png";
+import BookImage from "@/assets/images/books/Books (1).png";
 import {ToolboxItem} from "@/components/ToolboxItem";
 
 import {motion} from "framer-motion";
@@ -138,7 +138,7 @@ export const AboutSection = () => {
                             <CardHeader
                                 title={"My Reads"}
                                 description={"Explore the books shaping my perspectives"}/>
-                            <div className={`w-40 mx-auto mt-2 md:mt-0`}>
+                            <div className={`w-32 mx-auto mt-2 md:-mt-5`}>
                                 <Image src={BookImage} alt={`Book Image`}/>
                             </div>
                         </Card>
