@@ -1,4 +1,4 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import portfolioWebsite from "@/assets/images/myWeb.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
@@ -11,17 +11,20 @@ import {Card} from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Personal Project",
+    year: "2025",
+    title: "My Portfolio Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Built with Next.js, TypeScript, and Tailwind CSS" },
+      { title: "Fully responsive design for all devices" },
+      { title: "Deployed seamlessly on Vercel" },
     ],
-    link: "#",
-    image: darkSaasLandingPage,
+    liveLink: "https://www.yakiralbilya.com",
+    githubLink: "https://github.com/yakir3160/MyWeb",
+    image: portfolioWebsite,
   },
+
+
   {
     company: "Innovative Co",
     year: "2021",
@@ -61,7 +64,7 @@ export const ProjectsSection = () => {
                             top :`calc(64px + ${projectIndex * 38}px`
                         }}
                 >
-                  <div className={`lg:grid lg:grid-cols-2 lg:gap-16`}>
+                  <div className={`lg:grid lg:grid-cols-2 lg:gap-6`}>
                     <div className={`lg:pb-16`}>
                       <div
                           className={`uppercase gap-2  font-semibold inline-flex bg-gradient-to-r from-emerald-300 to-yellow tracking-widest text-sm text-transparent bg-clip-text `}>
@@ -79,8 +82,8 @@ export const ProjectsSection = () => {
                             </li>
                         ))}
                       </ul>
-                      <div className={`flex flex-col md:flex-row md:gap-4 mt-2`}>
-                        <a href={project.link}>
+                      <div className={`flex flex-col md:flex-row gap-2 md:gap-4 mt-2`}>
+                        <a href={project.githubLink}>
                           <button
                               className="inline-flex justify-center items-center gap-2 relative bg-background rounded-3xl w-full md:w-auto mt-6 md:mt-8">
                             <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-3xl"/>
@@ -91,9 +94,9 @@ export const ProjectsSection = () => {
                             </span>
                           </button>
                         </a>
-                        <a href={project.link}>
+                        <a href={project.liveLink}>
                           <button className={`inline-flex justify-center items-center  gap-2 bg-text 
-                       rounded-3xl h-12 px-6 w-full  md:w-auto mt-8 text-nowrap  font-semibold text-background`}>
+                       rounded-3xl h-12 px-6 w-full  md:w-auto mt-6 text-nowrap  md:mt-8 font-semibold text-background`}>
                             <span>Visit Live Site</span>
                             <ArrowRight className={`size-4`}/>
                           </button>
@@ -103,7 +106,7 @@ export const ProjectsSection = () => {
                     <div className={`relative`}>
                       <Image src={project.image}
                              alt={project.title}
-                             className={`mt-8 -mb-4 lg:mt-0 md:mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}/>
+                             className={`mt-8 -mb-4 lg:mt-10 md:-mb-16 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}/>
                     </div>
                   </div>
                 </Card>
