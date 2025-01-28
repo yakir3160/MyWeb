@@ -39,7 +39,7 @@ export const books = [
         url : "https://www.amazon.com/How-Build-Car-Autobiography-Greatest/dp/000819680X",
     },
     {
-        title: 'How to use graphic design to sell things',
+        title: 'How to use graphic design to sell...',
         author: 'Michael Bierut',
         image: HowToGDImg,
         url: "https://www.amazon.com/How-Use-Graphic-Design-Things/dp/0062413902",

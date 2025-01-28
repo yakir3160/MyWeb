@@ -32,8 +32,8 @@ export const BookCarousel = () => {
                 description={"Explore the books shaping my perspectives"}
             />
 
-            <div className={`w-60 md:w-48 mx-auto md:-mt-5 relative`}>
-
+            <div className={`w-20  mx-auto md:-mt-5 relative`}>
+                       
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentBookIndex}
@@ -41,22 +41,24 @@ export const BookCarousel = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -50 }}
                         transition={{ duration: 0.4 }}
-                        className={`flex flex-col items-center gap-2 absolute inset-0`}
+                        className={`flex flex-col items-center gap-2  inset-0`}
                     >
                         <Image
                             src={books[currentBookIndex].image}
                             alt={books[currentBookIndex].title}
-                            className={`rounded-lg`}
-                            width={160}
-                            height={240}
                         />
-                        <div className={`text-center`}>
-                            <h4 className={`font-semibold`}>{books[currentBookIndex].title}</h4>
-                            <p className={`text-sm text-text/60`}>{books[currentBookIndex].author}</p>
-                        </div>
+                   
                     </motion.div>
                 </AnimatePresence>
+               
             </div>
+             <div className={`text-center text-nowrap`}>
+                <a href={books[currentBookIndex].url} target="_blank" rel="noopener noreferrer" className={`text-primary underline`}>
+                            <h4 className={`font-semibold`}>{books[currentBookIndex].title}</h4>
+                            
+                        </a>
+                            <p className={`text-sm text-text/60`}>{books[currentBookIndex].author}</p>
+                        </div>
         </Card>
     );
 };
