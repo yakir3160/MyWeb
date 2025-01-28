@@ -70,7 +70,7 @@ export const BookCarousel = () => {
                 description="Explore the books shaping my perspectives"
             />
 
-            <div className="w-20 mx-auto md:-mt-5 relative">
+            <div className="w-24 md:w-20 mx-auto md:-mt-6 relative">
                 <button 
                     onClick={prevBook} 
                     className="absolute -left-2 top-1/2 -translate-y-1/2 -translate-x-8 p-1 rounded-full bg-background/50 hover:bg-background"
