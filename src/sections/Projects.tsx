@@ -1,55 +1,14 @@
-import portfolioWebsite from "@/assets/images/myWeb.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowRight from "@/assets/icons/arrow-up-right.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import grainImage from "@/assets/images/grain.jpg";
+
 import {SectionHeader} from "@/components/SectionHeader";
 import {Card} from "@/components/Card";
-
-const portfolioProjects = [
-  {
-    company: "Personal Project",
-    year: "2025",
-    title: "My Portfolio Website",
-    results: [
-      { title: "Built with Next.js, TypeScript, and Tailwind CSS" },
-      { title: "Fully responsive design for all devices" },
-      { title: "Deployed seamlessly on Vercel" },
-    ],
-    liveLink: "https://www.yakiralbilya.com",
-    githubLink: "https://github.com/yakir3160/MyWeb",
-    image: portfolioWebsite,
-  },
+import {portfolioProjects} from "@/constants/projects";
 
 
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "#",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "#",
-    image: aiStartupLandingPage,
-  },
-];
 
 export const ProjectsSection = () => {
   return(
@@ -82,10 +41,10 @@ export const ProjectsSection = () => {
                             </li>
                         ))}
                       </ul>
-                      <div className={`flex flex-col md:flex-row gap-2 md:gap-4 mt-2`}>
-                        <a href={project.githubLink}>
+                      <div className={`flex flex-col md:flex-row gap-4 md:gap-4  mt-6 md:mt-8 lg:mt-12 `}>
+                        <a href={project.githubLink}  target={'_blank'}>
                           <button
-                              className="inline-flex justify-center items-center gap-2 relative bg-background rounded-3xl w-full md:w-auto mt-6 md:mt-8">
+                              className="inline-flex justify-center items-center gap-2 relative bg-background rounded-3xl w-full md:w-auto ">
                             <div className="absolute inset-0 bg-gradient-to-r from-emerald-300 to-yellow rounded-3xl"/>
                             <div className="absolute inset-[1px] bg-background rounded-3xl"/>
                             <span className="relative inline-flex items-center gap-2 px-6 h-12">
@@ -94,19 +53,19 @@ export const ProjectsSection = () => {
                             </span>
                           </button>
                         </a>
-                        <a href={project.liveLink}>
+                        <a href={project.liveLink} target={'_blank'}>
                           <button className={`inline-flex justify-center items-center  gap-2 bg-text 
-                       rounded-3xl h-12 px-6 w-full  md:w-auto mt-6 text-nowrap  md:mt-8 font-semibold text-background`}>
+                       rounded-3xl h-12 px-6 w-full  md:w-auto text-nowrap   font-semibold text-background`}>
                             <span>Visit Live Site</span>
                             <ArrowRight className={`size-4`}/>
                           </button>
                         </a>
                       </div>
                     </div>
-                    <div className={`relative`}>
+                    <div className={``}>
                       <Image src={project.image}
                              alt={project.title}
-                             className={`mt-8 -mb-4 lg:mt-10 md:-mb-16 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}/>
+                             className={`mt-8 -mb-10 lg:mt-10 md:-mb-16 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}/>
                     </div>
                   </div>
                 </Card>

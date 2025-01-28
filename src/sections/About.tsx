@@ -3,126 +3,18 @@ import {SectionHeader} from "@/components/SectionHeader";
 import {Card} from "@/components/Card";
 import {CardHeader} from "@/components/CardHeader";
 import Image from "next/image";
-
-import StarIcon from "@/assets/icons/star.svg";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import TypescriptIcon from "@/assets/icons/typescript-svgrepo-com.svg";
-import HtmlIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import NextJsIcon from "@/assets/icons/nextjs-icon.svg";
-import TailwindIcon from "@/assets/icons/tailwind-css.svg";
-import ChromeDevToolsIcon from "@/assets/icons/chrome.svg";
-import GitHubIcon from "@/assets/icons/github.svg";
-import VercelIcon from "@/assets/icons/logo-vercel.svg"
-
 import MapImage from "@/assets/images/map.png";
 import SmileMemoji from "@/assets/images/memoji-smile.png";
-import BookImage from "@/assets/images/books/Books (1).png";
+import BookImage from "@/assets/images/books/atomicHabits.png";
 import {ToolboxItem} from "@/components/ToolboxItem";
-
+import {toolbox} from "@/constants/toolbox";
+import {hobbies} from "@/constants/hobbies";
 import {motion} from "framer-motion";
 import {useRef} from "react";
+import {BookCarousel} from "@/components/BookCarousel";
 
 
-const toolboxItems = [
-    {
-        title : 'JavaScript',
-        iconType
-            : JavascriptIcon,
-    },
-    {
-        title: 'TypeScript',
-        iconType
-            : TypescriptIcon,
-    },
-    {
-        title : 'HTML5',
-        iconType
-            : HtmlIcon,
-    },
-    {
-        title : 'CSS3',
-        iconType
-            : CssIcon,
-    },
-    {
-        title : 'React',
-        iconType
-            : ReactIcon,
-    },
-    {
-        title : 'Next.js',
-        iconType
-            : NextJsIcon,
-    },
-    {
-        title : 'Tailwind CSS',
-        iconType
-            : TailwindIcon,
-    },
-    {
-        title : 'GitHub',
-        iconType
-            : GitHubIcon,
-    },
-    {
-        title : 'Vercel',
-        iconType
-            : VercelIcon,
-    },
-    {
-        title : 'Chrome DevTools',
-        iconType
-            : ChromeDevToolsIcon,
-    },
-];
-const hobbies = [
-    {
-        title : 'Travel',
-        emoji : '🌍',
-        left:'5%',
-        top:'5%',
-    },
-    {
-        title : 'American Football',
-        emoji : '🏈',
-        left:'50%',
-        top:'5%',
-    },
 
-    {
-        title: 'Racing',
-        emoji: '🏎️',
-        left:'10%',
-        top:'35%',
-    },
-    {
-        title : 'Cooking',
-        emoji : '🍳',
-        left:'5%',
-        top:'65%',
-    },
-    {
-        title: 'Fitness',
-        emoji: '🏋️‍♂️️',
-        left:'60%',
-        top:'45%',
-    },
-    {
-        title : 'Meditation',
-        emoji : '🧘',
-        left:'45%',
-        top:'70%',
-    },
-    {
-        title : 'Music',
-        emoji : '🎵',
-        left:'25%',
-        top:'50%',
-    },
-
-]
 export const AboutSection = () => {
     const constraintRef  = useRef(null)
     return (
@@ -134,22 +26,15 @@ export const AboutSection = () => {
                     description={"Learn more about who I am, what I do, and what inspires me."}/>
                 <div className={`mt-[85px] flex flex-col gap-8`}>
                     <div className={`grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3`}>
-                        <Card className={`h-[320px] md:col-span-2 lg:col-span-1`}>
-                            <CardHeader
-                                title={"My Reads"}
-                                description={"Explore the books shaping my perspectives"}/>
-                            <div className={`w-32 mx-auto mt-2 md:-mt-5`}>
-                                <Image src={BookImage} alt={`Book Image`}/>
-                            </div>
-                        </Card>
+                        <BookCarousel/>
                         <Card className={`h-[320px] md:col-span-3 lg:col-span-2`}>
                             <CardHeader
                                 title={"My Toolbox"}
                                 description={"Explore the technologies and tools I use to" +
                                     " craft exceptional digital experiences"}
                             />
-                            <ToolboxItem items={toolboxItems} itemsWrapperClassName={'animate-move-left [animation-duration:30s]'}/>
-                            <ToolboxItem items={toolboxItems} className={`mt-4`}  itemsWrapperClassName={'animate-move-right [animation-duration:25s]'}/>
+                            <ToolboxItem items={toolbox} itemsWrapperClassName={'animate-move-left [animation-duration:30s]'}/>
+                            <ToolboxItem items={toolbox} className={`mt-4`}  itemsWrapperClassName={'animate-move-right [animation-duration:25s]'}/>
                         </Card>
                     </div>
                     <div className={`grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3`}>
