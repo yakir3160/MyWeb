@@ -73,16 +73,16 @@ export const BookCarousel = () => {
             <div className="w-20 mx-auto md:-mt-5 relative">
                 <button 
                     onClick={prevBook} 
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 p-1 rounded-full bg-background/80 hover:bg-background"
+                    className="absolute -left-2 top-1/2 -translate-y-1/2 -translate-x-8 p-1 rounded-full bg-background/50 hover:bg-background"
                 >
-                    <ChevronLeft className="w-4 h-4" />
+                    <ChevronLeft className="size-6" />
                 </button>
                 
                 <button 
                     onClick={nextBook} 
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 p-1 rounded-full bg-background/80 hover:bg-background"
+                    className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-8 p-1 rounded-full bg-background/50 hover:bg-background"
                 >
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="size-6" />
                 </button>
                        
                 <AnimatePresence initial={false} custom={direction} mode="wait">
