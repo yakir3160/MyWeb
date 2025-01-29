@@ -1,7 +1,7 @@
 'use client'
 
-import { Card } from "@/components/Card";
-import { CardHeader } from "@/components/CardHeader";
+import { Card } from "@/components/Card/Card";
+import { CardHeader } from "@/components/Card/CardHeader";
 import Image from "next/image";
 import { books } from "@/constants/books";
 import { useEffect, useState } from "react";
@@ -45,10 +45,10 @@ export const BookCarousel = () => {
             opacity: number;
         };
     }
-    
-    const variants : CustomVariants = {
+
+    const variants: CustomVariants = {
         enter: (direction) => ({
-            x: direction > 0 ? 10 : -10,
+            x: direction > 0 ? 50 : -50,
             opacity: 0
         }),
         center: {
@@ -58,7 +58,7 @@ export const BookCarousel = () => {
         },
         exit: (direction) => ({
             zIndex: 0,
-            x: direction < 0 ? 10 : -10,
+            x: direction > 0 ? -50 : 50,
             opacity: 0
         })
     };
@@ -94,9 +94,10 @@ export const BookCarousel = () => {
                         animate="center"
                         exit="exit"
                         transition={{
-                            x: { type: "spring", stiffness: 300, damping: 30 },
+                            x: { type: "spring", stiffness: 120, damping: 20 },
                             opacity: { duration: 0.2 }
                         }}
+
                         className="flex flex-col items-center gap-2 inset-0"
                     >
                         <Image

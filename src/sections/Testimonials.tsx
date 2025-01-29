@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import {SectionHeader} from "@/components/SectionHeader";
-import {Card} from "@/components/Card";
+import {Card} from "@/components/Card/Card";
 import {Fragment} from "react";
 import {testimonials} from "@/constants/testimonials";
 

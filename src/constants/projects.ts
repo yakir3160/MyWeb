@@ -1,10 +1,10 @@
 import portfolioWebsite from "@/assets/images/myWeb.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import KnowasteImage from "@/assets/images/Knowaste.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import {StaticImageData} from "next/image";
 
 
-interface PortfolioProject {
+export interface PortfolioProject {
     company: string;
     year: string;
     title: string;
@@ -12,6 +12,7 @@ interface PortfolioProject {
     liveLink?: string;
     githubLink?: string;
     image: StaticImageData;
+
 }
 export const portfolioProjects = [
     {
@@ -19,27 +20,29 @@ export const portfolioProjects = [
         year: "2025",
         title: "My Portfolio Website",
         results: [
-            { title: "Built with Next.js, TypeScript, and Tailwind CSS" },
-            { title: "Fully responsive design for all devices" },
-            { title: "Deployed seamlessly on Vercel" },
+            { title: "Developed with Next.js, TypeScript, and Tailwind CSS" },
+            { title: "Implemented smooth animations using Framer Motion" },
+            { title: "Designed a fully responsive UI for all devices" },
+            { title: "Deployed seamlessly on Vercel with CI/CD pipeline" }
         ],
-        liveLink: "https://www.yakiralbilya.com",
         githubLink: "https://github.com/yakir3160/MyWeb",
         image: portfolioWebsite,
     },
 
 
     {
-        company: "Innovative Co",
-        year: "2021",
-        title: "Light Saas Landing Page",
+        company: "Graduation Project",
+        year: "2024",
+        title: "Knowaste",
         results: [
-            { title: "Boosted sales by 20%" },
-            { title: "Expanded customer reach by 35%" },
-            { title: "Increased brand awareness by 15%" },
+            { title: "Developed a Full-Stack Web Application with React, Tailwind, Node.js & Firebase Admin" },
+            { title: "Designed and Implemented a Restaurant Waste Management System" },
+            { title: "Conducted Data Analysis and Optimized Database Performance" }
         ],
-        link: "#",
-        image: lightSaasLandingPage,
+        // liveLink: "https://www.yakiralbilya.com",
+        githubLink: "https://github.com/yakir3160/MyWeb",
+        image: KnowasteImage,
+        hasLiveLink: false, //not yet deployed
     },
     {
         company: "Quantum Dynamics",
