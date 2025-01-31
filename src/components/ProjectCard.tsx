@@ -46,12 +46,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 </span>
                             </button>
                         </a>
+                        {project.liveLink && (
                         <a href={project.liveLink} target="_blank">
                             <button className="inline-flex justify-center items-center gap-2 bg-text rounded-3xl h-12 px-6 w-full md:w-auto text-nowrap font-semibold text-background">
                                 <span>Visit Live Site</span>
                                 <ArrowRight className="size-4" />
                             </button>
                         </a>
+                            )}
                     </div>
                 </div>
                 <div>
