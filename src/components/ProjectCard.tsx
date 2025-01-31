@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             key={project.title}
             className="pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16"
             style={{
-                top: `calc(64px + ${index * 38}px)`,
+                top: `calc(64px + ${index * 32}px)`,
             }}
         >
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
@@ -26,8 +26,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                         <span>{project.year}</span>
                     </div>
                     <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">{project.title}</h3>
-                    <hr className="border-t-2 border-action/20 mt-4 md:mt-5" />
-                    <ul className="flex flex-col gap-4 mt-4">
+                    <hr className="border-t-2 border-action/20 mt-2 md:mt-5" />
+                    <ul className="flex flex-col gap-4 mt-2">
                         {project.results.map((result, i) => (
                             <li key={i} className="flex gap-2 text-sm md:text-base text-text/60">
                                 <CheckIcon className="size-5 md:size-6" />
