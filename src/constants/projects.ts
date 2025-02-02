@@ -44,16 +44,5 @@ export const portfolioProjects = [
         image: KnowasteImage,
         hasLiveLink: false, //not yet deployed
     },
-    {
-        company: "Quantum Dynamics",
-        year: "2023",
-        title: "AI Startup Landing Page",
-        results: [
-            { title: "Enhanced user experience by 40%" },
-            { title: "Improved site speed by 50%" },
-            { title: "Increased mobile traffic by 35%" },
-        ],
-        link: "#",
-        image: aiStartupLandingPage,
-    },
+
 ] as PortfolioProject[];
