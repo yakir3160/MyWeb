@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             key={project.title}
             className="pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16"
             style={{
-                top: `calc(64px + ${index * 32}px)`,
+                top: `calc(64px + ${index * 38}px)`,
             }}
         >
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
