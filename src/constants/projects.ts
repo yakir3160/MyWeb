@@ -40,7 +40,7 @@ export const portfolioProjects = [
             { title: "Conducted Data Analysis and Optimized Database Performance" }
         ],
         // liveLink: "https://www.yakiralbilya.com",
-        githubLink: "https://github.com/yakir3160/MyWeb",
+        githubLink: "https://github.com/yakir3160/knowaste",
         image: KnowasteImage,
         hasLiveLink: false, //not yet deployed
     },
