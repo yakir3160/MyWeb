@@ -6,7 +6,7 @@ import { HeroActions } from "@/components/Hero/HeroActions";
 
 export const HeroSection = () => {
   return (
-      <div className="py-32 md:py-60 lg:py-80 relative z-0 overflow-x-clip">
+      <div className="py-32 md:py-40 lg:py-60 2xl:py-80 relative z-0 overflow-x-clip">
         <HeroBackground />
         <div className="container">
           <HeroHeader />
